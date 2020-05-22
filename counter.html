@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(248, 174, 37);
+    }
+    
+    .text #text {
+        font-size: 200px;
+        padding: 10px;
+    }
+    
+    .buttons {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    
+    .buttons button {
+        padding: 20px 30px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        background-color: rgb(112, 255, 68);
+        transition: .5s;
+    }
+    
+    .buttons button:hover {
+        border-top-right-radius: 80px;
+        padding-right: 45px;
+        padding-left: 15px;
+    }
+    
+    .buttons button:focus {
+        outline: none;
+    }
+</style>
+
+<body>
+
+    <div class="text">
+        <h1 id="text">0</h1>
+    </div>
+    <div class="buttons">
+        <button onclick="inc()" type="button">Increase</button>
+        <button onclick="dec()" type="button">Decrease</button>
+    </div>
+</body>
+<script>
+    function inc() {
+
+        document.getElementById('text').innerHTML = Number(document.getElementById('text').innerHTML) + 1;
+
+    }
+
+    function dec() {
+
+        document.getElementById('text').innerHTML = Number(document.getElementById('text').innerHTML) - 1;
+
+    }
+</script>
+
+</html>
